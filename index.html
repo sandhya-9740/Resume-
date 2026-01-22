@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+    height:100vh;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* LEFT PANEL */
+.sidebar{
+    width:280px;
+    background:#0f172a;
+    color:#fff;
+    padding:40px 25px;
+}
+
+.sidebar h1{
+    font-size:26px;
+    margin-bottom:5px;
+}
+
+.sidebar p{
+    font-size:14px;
+    opacity:0.8;
+    margin-bottom:30px;
+}
+
+.sidebar button{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:8px;
+    background:#1e293b;
+    color:#fff;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.sidebar button:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* RIGHT CONTENT */
+.content{
+    flex:1;
+    padding:60px;
+    overflow-y:auto;
+}
+
+.section{
+    display:none;
+}
+
+.section.active{
+    display:block;
+}
+
+.section h2{
+    font-size:28px;
+    color:#0f172a;
+    margin-bottom:20px;
+    border-bottom:3px solid #38bdf8;
+    display:inline-block;
+}
+
+.section p, li{
+    font-size:16px;
+    margin:10px 0;
+    color:#333;
+    line-height:1.7;
+}
+
+ul{
+    margin-left:20px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#0f172a;
+    color:#fff;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT MENU -->
+    <div class="sidebar">
+        <h1>Sandhya</h1>
+        <p>Software Developer Intern</p>
+
+        <button onclick="show('profile')">Profile</button>
+        <button onclick="show('internship')">Internship</button>
+        <button onclick="show('certificate')">Certificates</button>
+        <button onclick="show('education')">Education</button>
+        <button onclick="show('contact')">Contact</button>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="content">
+
+        <div id="profile" class="section active">
+            <h2>Profile</h2>
+            <p><strong>Name:</strong> Sandhya</p>
+            <p><strong>Role:</strong> Software Developer Intern</p>
+            <p><strong>Skills:</strong> HTML, CSS, JavaScript, Python, AI & ML</p>
+            <p>
+                Passionate software developer with strong knowledge in web
+                technologies and machine learning, seeking opportunities
+                to contribute to real-world projects.
+            </p>
+        </div>
+
+        <div id="internship" class="section">
+            <h2>Internship</h2>
+            <p><strong>Company:</strong> IMTDA Infotech Private Limited</p>
+            <p><strong>Domain:</strong> Software Development using AI & ML</p>
+            <ul>
+                <li>Worked on real-time development projects</li>
+                <li>Built ML models and web applications</li>
+                <li>Improved problem-solving and coding skills</li>
+            </ul>
+        </div>
+
+        <div id="certificate" class="section">
+            <h2>Certificates</h2>
+            <ul>
+                <li>AI & Machine Learning Internship Certificate</li>
+                <li>Python Programming</li>
+                <li>Web Development</li>
+                <li>Data Science Fundamentals</li>
+            </ul>
+        </div>
+
+        <div id="education" class="section">
+            <h2>Education</h2>
+            <p><strong>BCA – Computer of Computer Application</strong></p>
+            <p>CGPA: 8.69</p>
+            <p>College:Indus Valley Degree College </p>
+            <p>2022 – 2026</p>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: sandhya02183@email.com</p>
+            <p>Phone: +91 8618403429 </p>
+            <p>GitHub: github.com/sandhya-9740</p>
+            <p>LinkedIn: linkedin.com/in/sandhya</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    IMTDA Infotech Private Limited | Software Development & AI–ML Solutions
+</footer>
+
+<script>
+function show(id){
+    document.querySelectorAll('.section').forEach(s=>{
+        s.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
